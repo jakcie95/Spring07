@@ -11,6 +11,19 @@
 	<select id="getUser" resultMap="member">
 		select * from membership where id= #{id}
 	</select>
+	<select id="memberInfo" resultMap="member">
+		select * from membership
+	</select>
+	<insert id="register">
+		insert into membership(id, pw, addr) values(#{id}, #{pw}, #{addr})
+	</insert>
+	<delete id="delete">
+		delete from membership where id=#{id}
+	</delete>
+	<update id="modify">
+		update membership set addr=#{addr},
+							pw= #{pw} where id=#{id}
+	</update>
 </mapper>
 
 

@@ -15,7 +15,7 @@
 					<input type="text" name="id" placeholder="아이디"><br>
 					<input type="password" name="pw" placeholder="비밀번호"><br>
 					<input type="submit" value="로그인">
-					<a href="register">회원가입</a>
+					<a href="<%=request.getContextPath() %>/member/register_form">회원가입</a>
 				</form>
 			</div>
 	</div>
