@@ -14,4 +14,6 @@ public interface MemberService {
 	public void delete(String id);
 	public void modifyForm(String id, Model model);
 	public void modify(HttpServletRequest req, String addr);
+	public void keepLogin(String id, String cookieId);
+	public MemberDTO getCookieUser(String cookie);
 }

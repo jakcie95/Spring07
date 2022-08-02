@@ -10,7 +10,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <c:set var="contextPath" value="${pageContext.request.contextPath }"/>
 <%@ include file="../default/header.jsp" %>
-<h3>회원정보</h3>
+<h3 align="center">회원정보</h3>
 <div class="wrap">
 	<table border="1">
 		<tr>

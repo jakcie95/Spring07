@@ -4,7 +4,15 @@ public class MemberDTO {
 	private String id;
 	private String pw;
 	private String addr;
+	private String loginCookie;
 	
+	
+	public String getLoginCookie() {
+		return loginCookie;
+	}
+	public void setLoginCookie(String loginCookie) {
+		this.loginCookie = loginCookie;
+	}
 	public String getId() {
 		return id;
 	}
