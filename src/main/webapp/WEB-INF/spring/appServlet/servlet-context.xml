@@ -28,11 +28,12 @@
 	<beans:bean id="autoLogin" class="com.care.root.common.AutoLogin"/>
 	<interceptors>
 			
-		<interceptor>
+		<interceptor> <!-- 인터셉트 사용할페이지 맵핑 -->
 			<mapping path="/member/memberInfo"/>
 			<mapping path="/member/info"/>
 			<mapping path="/member/modify_form"/>
 			<mapping path="/member/delete"/>
+			<mapping path="/board/writeForm"/> 
 			<beans:ref bean="loginChk"/>
 		</interceptor>
 		

@@ -1,13 +1,17 @@
 package com.care.root.board.dto;
 
+import java.sql.Timestamp;
+import java.text.SimpleDateFormat;
+
 public class BoardDTO {
-	private int write_no, hit;
-	private String title, content, savedate, image_file_name, id;
-	public int getWrite_no() {
-		return write_no;
+	private int writeNo, hit;
+	private String title, content, saveDate, imageFileName, id;
+	
+	public int getWriteNo() {
+		return writeNo;
 	}
-	public void setWrite_no(int write_no) {
-		this.write_no = write_no;
+	public void setWriteNo(int writeNo) {
+		this.writeNo = writeNo;
 	}
 	public int getHit() {
 		return hit;
@@ -27,17 +31,23 @@ public class BoardDTO {
 	public void setContent(String content) {
 		this.content = content;
 	}
-	public String getSavedate() {
-		return savedate;
+	public String getSaveDate() {
+		return saveDate;
 	}
-	public void setSavedate(String savedate) {
-		this.savedate = savedate;
+	public void setSaveDate(Timestamp saveDate) {
+		SimpleDateFormat s = new SimpleDateFormat("YYYY-MM-dd HH:mm:ss");
+		this.saveDate = s.format( saveDate );
 	}
-	public String getImage_file_name() {
-		return image_file_name;
+	/*
+	public void setSaveDate(String saveDate) {
+		this.saveDate = saveDate;
 	}
-	public void setImage_file_name(String image_file_name) {
-		this.image_file_name = image_file_name;
+	*/
+	public String getImageFileName() {
+		return imageFileName;
+	}
+	public void setImageFileName(String imageFileName) {
+		this.imageFileName = imageFileName;
 	}
 	public String getId() {
 		return id;
@@ -45,6 +55,5 @@ public class BoardDTO {
 	public void setId(String id) {
 		this.id = id;
 	}
-	
 	
 }
