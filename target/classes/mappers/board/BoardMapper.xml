@@ -35,4 +35,18 @@
 		update mvc_board set title=#{title}, content=#{content},
 		image_file_name=#{imageFileName} where write_no=#{writeNo}
 	</update>
+	<insert id="addReply">
+		insert into reply(id, title, content, write_group)
+			values(#{userId}, #{title}, #{content}, #{write_no})
+	</insert>
+	<select id="getRepList" resultType="com.care.root.board.dto.BoardRepDTO">
+		select * from reply where write_group=#{write_group}
+									order by write_date desc
+	</select>
 </mapper>
+
+
+
+
+
+

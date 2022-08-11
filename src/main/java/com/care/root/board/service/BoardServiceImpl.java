@@ -1,6 +1,9 @@
 package com.care.root.board.service;
 
 
+import java.util.List;
+import java.util.Map;
+
 import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,7 @@ import org.springframework.web.multipart.MultipartFile;
 import org.springframework.web.multipart.MultipartHttpServletRequest;
 
 import com.care.root.board.dto.BoardDTO;
+import com.care.root.board.dto.BoardRepDTO;
 import com.care.root.mybatis.board.BoardMapper;
 
 @Service
@@ -100,6 +104,13 @@ public class BoardServiceImpl implements BoardService{
 			url = request.getContextPath()+"board/modifyForm?writeNo="+dto.getWriteNo();
 		}
 		return bfs.getMessage(msg, url);
+	}
+	public void addReply(Map<String, String>map, String userId) {
+		map.put("userId", userId);
+		mapper.addReply( map );
+	}
+	public List<BoardRepDTO> getRepList(int write_group){
+		return mapper.getRepList(write_group);
 	}
 }
 
