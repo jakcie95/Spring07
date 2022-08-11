@@ -32,7 +32,7 @@
 						<td>${dto.writeNo }</td>
 						<td>${dto.id }</td>
 						<td>
-						<a href="contentView?title=${dto.title }">
+						<a href="contentView?writeNo=${dto.writeNo }">
 						${dto.title }
 						</a>
 						</td>

@@ -9,7 +9,10 @@ public interface BoardService {
 	public void boardAllList(Model model);
 	public String writeSave(MultipartHttpServletRequest mul,
 							HttpServletRequest request);
-	public void contentView(Model model, String title);
-	public String delete(String file,String title,
+	public void contentView(int writeNo, Model model);
+	public String delete(int writeNo, String imageFileName,
+						HttpServletRequest request);
+	public void modifyForm(int writeNo,Model model);
+	public String modify(MultipartHttpServletRequest mul,
 						HttpServletRequest request);
 }

@@ -28,13 +28,8 @@ public class BoardFileServiceImpl implements BoardFileService{
 	    }
 	    return sysFileName;
 	}
-	public void deleteFile(String file) {
-		File d = new File(IMAGE_REPO+"/"+file);
-		try {
+	public void deleteImage(String fName) {
+		File d = new File(IMAGE_REPO+"/"+fName);
 			d.delete();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
 	}
-
 }
