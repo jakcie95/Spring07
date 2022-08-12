@@ -11,7 +11,7 @@ import org.springframework.web.multipart.MultipartHttpServletRequest;
 import com.care.root.board.dto.BoardRepDTO;
 
 public interface BoardService {
-	public void boardAllList(Model model);
+	public void boardAllList(Model model, int num);
 	
 	public String writeSave(MultipartHttpServletRequest mul,
 							HttpServletRequest request);

@@ -23,7 +23,7 @@ import com.care.root.member.service.MemberService;
 @RequestMapping("member")
 public class MemberController implements SessionName{
 	@Autowired MemberService ms;
-	
+
 	@GetMapping("login")
 	public String login() {
 		return "member/login";

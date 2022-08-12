@@ -27,12 +27,16 @@ public class BoardController{
 	@Autowired BoardService bs;
 	
 	@GetMapping("boardAllList")
-	public String boardAllList(Model model) {
-		bs.boardAllList(model);
+	public String boardAllList(Model model, 
+								//페이징처리
+								@RequestParam(value="num", required = false, defaultValue="1") int num) {
+		
+		bs.boardAllList(model, num);
 		return "board/boardAllList";
 	}
 	@GetMapping("writeForm")
 	public String writeForm() {
+		System.out.println("writeForm......");
 		return "board/writeForm";
 	}
 	@PostMapping("writeSave")
